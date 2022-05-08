@@ -14,7 +14,7 @@ enum ViewMode {
 
 class CustomCardView: UIView {
 	
-	//MARK: - PROPERTIES
+	//MARK: - CONSTRAINTS
 	var vmode: ViewMode?
 	var containerLeadingConstraints: NSLayoutConstraint?
 	var containerTopConstraints: NSLayoutConstraint?
@@ -23,7 +23,7 @@ class CustomCardView: UIView {
 	var dataMode: CardViewModel?
 	
 	//MARK: - ELEMENTS
-	//view do card
+	// view do card
 	lazy var cardContainerView: UIView = {
 		let v = UIView()
 		// desabilitando constraints automáticas
@@ -40,7 +40,7 @@ class CustomCardView: UIView {
 		return v
 	}()
 	
-	//imagem sobre o card como um todo
+	// imagem sobre o card como um todo
 	lazy var cardImage: UIImageView = {
 		let img = UIImageView()
 		
@@ -48,7 +48,7 @@ class CustomCardView: UIView {
 		// aspecto da imagem
 		img.contentMode = .scaleAspectFill
 		img.backgroundColor = .black
-		
+
 		return img
 	}()
 	
@@ -102,5 +102,4 @@ class CustomCardView: UIView {
 		
 		return btn
 	}()
-
 }
