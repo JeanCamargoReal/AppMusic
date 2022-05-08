@@ -8,6 +8,8 @@
 import UIKit
 
 class CardViewTableViewCell: UITableViewCell {
+	
+	// MARK: - CONFIG
 	static let identifier: String = "CardViewTableViewCell"
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

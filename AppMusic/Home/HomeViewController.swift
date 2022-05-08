@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 	
+	// MARK: - CONFIG
 	var screen: HomeViewControllerScreen?
 	
 	override func loadView() {
@@ -22,6 +23,8 @@ class HomeViewController: UIViewController {
 	}
 }
 
+
+// MARK: - EXTENSIONS
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

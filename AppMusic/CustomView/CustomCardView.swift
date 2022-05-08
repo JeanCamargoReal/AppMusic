@@ -14,7 +14,7 @@ enum ViewMode {
 
 class CustomCardView: UIView {
 	
-	//MARK: - PROPRIEDADES
+	//MARK: - PROPERTIES
 	var vmode: ViewMode?
 	var containerLeadingConstraints: NSLayoutConstraint?
 	var containerTopConstraints: NSLayoutConstraint?
@@ -22,7 +22,7 @@ class CustomCardView: UIView {
 	var containerBottomConstraints: NSLayoutConstraint?
 	var dataMode: CardViewModel?
 	
-	//MARK: - ELEMENTOS
+	//MARK: - ELEMENTS
 	//view do card
 	lazy var cardContainerView: UIView = {
 		let v = UIView()
