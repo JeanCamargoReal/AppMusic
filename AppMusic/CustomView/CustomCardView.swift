@@ -21,6 +21,7 @@ class CustomCardView: UIView {
 		self.dataMode = cardData
 		super.init(frame: frame)
 		self.addSubViews()
+		self.setUpConstraints()
 	}
 	
 	required init?(coder: NSCoder) {
@@ -80,6 +81,13 @@ class CustomCardView: UIView {
 			self.cardTitleLabel.topAnchor.constraint(equalTo: self.cardCategoryDateLabel.bottomAnchor, constant: 20),
 			self.cardTitleLabel.leadingAnchor.constraint(equalTo: self.cardContainerView.leadingAnchor, constant: 20),
 			self.cardTitleLabel.trailingAnchor.constraint(equalTo: self.cardContainerView.trailingAnchor, constant: -20),
+			
+			self.likeAndTimeLabel.topAnchor.constraint(equalTo: self.cardTitleLabel.bottomAnchor, constant: 10),
+			self.likeAndTimeLabel.centerXAnchor.constraint(equalTo: self.cardContainerView.centerXAnchor),
+			
+			self.descriptionTitleLabel.topAnchor.constraint(equalTo: self.likeAndTimeLabel.bottomAnchor, constant: 30),
+			self.descriptionTitleLabel.leadingAnchor.constraint(equalTo: self.cardContainerView.leadingAnchor, constant: 40),
+			self.descriptionTitleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
 		])
 	}
 	
@@ -228,7 +236,7 @@ class CustomCardView: UIView {
 		self.updateLayout(for: self.vmode ?? .card)
 	}
 	
-	// MARK: Config card if full or card
+	// MARK: - Config card if full or card
 	private func updateLayout(for mode: ViewMode) {
 		if mode == .full {
 			self.containerLeadingConstraints?.constant = 0
@@ -244,5 +252,14 @@ class CustomCardView: UIView {
 			self.descriptionTitleLabel.isHidden = true
 		}
 	}
-
+	
+	public func setupView(data: CardViewModel) {
+		self.cardCategoryTitleLabel.text = data.categoryName
+		self.cardCategoryDateLabel.text = data.categoryDate
+		self.cardTitleLabel.text = data.cardTitle
+		self.likeAndTimeLabel.attributedText = NSAttributedString.featureText(data.likeCount ?? "", data.duration ?? "")
+		self.descriptionTitleLabel.text = data.cardDescription
+		self.cardImage.image = UIImage(named: data.cardImage ?? "")
+		self.cardProfilePicture.image = UIImage(named: data.categoryImage ?? "")
+	}
 }
