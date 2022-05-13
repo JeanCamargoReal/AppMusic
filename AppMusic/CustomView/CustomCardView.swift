@@ -15,10 +15,8 @@ enum ViewMode {
 class CustomCardView: UIView {
 	
 	// MARK: - INIT
-	init(viewMode: ViewMode, cardData: CardViewModel) {
+	init() {
 		let frame = CGRect.zero
-		self.vmode = viewMode
-		self.dataMode = cardData
 		super.init(frame: frame)
 		self.addSubViews()
 		self.setUpConstraints()
@@ -44,20 +42,20 @@ class CustomCardView: UIView {
 		self.containerLeadingConstraints?.isActive = true
 		
 		self.containerTopConstraints = cardContainerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 15)
-		self.containerLeadingConstraints?.isActive = true
+		self.containerTopConstraints?.isActive = true
 		
 		self.containerBottomConstraints = cardContainerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15)
-		self.containerLeadingConstraints?.isActive = true
+		self.containerBottomConstraints?.isActive = true
 		
 		self.containerTrailingConstraints = cardContainerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30)
-		self.containerLeadingConstraints?.isActive = true
+		self.containerTrailingConstraints?.isActive = true
 		
 		self.overlayView.pin(to: self.cardContainerView)
 		self.cardImage.pin(to: self.cardContainerView)
 		
 		NSLayoutConstraint.activate([
 			self.profileBorderView.topAnchor.constraint(equalTo: self.cardContainerView.topAnchor, constant: 60),
-			self.profileBorderView.centerXAnchor.constraint(equalTo: cardContainerView.centerXAnchor),
+			self.profileBorderView.centerXAnchor.constraint(equalTo: self.cardContainerView.centerXAnchor),
 			self.profileBorderView.widthAnchor.constraint(equalToConstant: 50),
 			self.profileBorderView.heightAnchor.constraint(equalToConstant: 50),
 			
@@ -87,7 +85,7 @@ class CustomCardView: UIView {
 			
 			self.descriptionTitleLabel.topAnchor.constraint(equalTo: self.likeAndTimeLabel.bottomAnchor, constant: 30),
 			self.descriptionTitleLabel.leadingAnchor.constraint(equalTo: self.cardContainerView.leadingAnchor, constant: 40),
-			self.descriptionTitleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
+			self.descriptionTitleLabel.trailingAnchor.constraint(equalTo: self.cardContainerView.trailingAnchor, constant: -40),
 		])
 	}
 	
