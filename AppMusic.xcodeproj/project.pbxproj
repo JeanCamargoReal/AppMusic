@@ -10,6 +10,7 @@
 		C5096D9527D24051006A3BCC /* CardViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5096D9427D24051006A3BCC /* CardViewTableViewCell.swift */; };
 		C5096D9827D2E303006A3BCC /* CustomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5096D9727D2E303006A3BCC /* CustomCardView.swift */; };
 		C50D69BD27C69CCF00E52E3B /* HomeViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D69BC27C69CCF00E52E3B /* HomeViewControllerScreen.swift */; };
+		C5D2A1CF282F000A00C0163E /* CardActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D2A1CE282F000A00C0163E /* CardActionView.swift */; };
 		C5F3CFEC27C2E926004FBDA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F3CFEB27C2E926004FBDA1 /* AppDelegate.swift */; };
 		C5F3CFEE27C2E926004FBDA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F3CFED27C2E926004FBDA1 /* SceneDelegate.swift */; };
 		C5F3CFF027C2E926004FBDA1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F3CFEF27C2E926004FBDA1 /* HomeViewController.swift */; };
@@ -25,6 +26,7 @@
 		C5096D9427D24051006A3BCC /* CardViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewTableViewCell.swift; sourceTree = "<group>"; };
 		C5096D9727D2E303006A3BCC /* CustomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardView.swift; sourceTree = "<group>"; };
 		C50D69BC27C69CCF00E52E3B /* HomeViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerScreen.swift; sourceTree = "<group>"; };
+		C5D2A1CE282F000A00C0163E /* CardActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActionView.swift; sourceTree = "<group>"; };
 		C5F3CFE827C2E926004FBDA1 /* AppMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F3CFEB27C2E926004FBDA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5F3CFED27C2E926004FBDA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				C5096D9727D2E303006A3BCC /* CustomCardView.swift */,
+				C5D2A1CE282F000A00C0163E /* CardActionView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				C5F3CFF027C2E926004FBDA1 /* HomeViewController.swift in Sources */,
 				C5F3D00627C3C7B0004FBDA1 /* NSTextAttachment + Extension.swift in Sources */,
 				C5F3CFEC27C2E926004FBDA1 /* AppDelegate.swift in Sources */,
+				C5D2A1CF282F000A00C0163E /* CardActionView.swift in Sources */,
 				C5F3D00827C3C7F7004FBDA1 /* UIView + Extension.swift in Sources */,
 				C5096D9827D2E303006A3BCC /* CustomCardView.swift in Sources */,
 				C5F3D00427C3C77A004FBDA1 /* NSAttributedString + Extension.swift in Sources */,
