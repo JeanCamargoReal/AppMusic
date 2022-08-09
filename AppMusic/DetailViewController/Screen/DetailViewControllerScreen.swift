@@ -30,9 +30,8 @@ class DetailViewControllerScreen: UIView {
 	}()
 	
 	lazy var cardView: CustomCardView = {
-		let v = CustomCardView()
+        let v = CustomCardView(mode: .full)
 		v.translatesAutoresizingMaskIntoConstraints = false
-		v.actionsView.updateLayout(for: .full)
 		v.cardContainerView.layer.cornerRadius = 0.0
 		v.setupView(data: self.cardModel ?? CardViewModel())
 		
